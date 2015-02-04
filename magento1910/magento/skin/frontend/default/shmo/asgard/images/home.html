@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript">
+
+    //check if the page was called via ajax - if not, redirect to index.html, crawlers will ignore this and fetch the simple HTML pageHash
+    function checkIfAsgard(){
+
+        var thisHref = window.location.href;
+        thisHref = thisHref.substr(thisHref.lastIndexOf('/') + 1);
+        thisHref = thisHref.split(".html");
+
+        if(typeof this["isAsgard"] === 'undefined')
+            window.location.href = "index.html"+"#"+thisHref[0];
+
+    }
+
+    //check if the page was called via ajax - if not, redirect to index.html, crawlers will ignore this and fetch the simple HTML pageHash
+    checkIfAsgard();
+
+    function animateThis(){
+
+        //custom inner page animations
+        animatePage("home1", "left");
+        animatePage("home2", "right");
+        animatePage("home", "top");
+        animatePage("home3", "bottom");
+
+    }
+
+    //animate buttons and other elements on hover
+    animateOnHover();
+
+    //function that handles all normal links
+    linkage();
+
+    //start nivo slider
+    $('#slider').nivoSlider();
+
+    //function that handles blog list post animation and linking
+    blogListPost();
+
+</script>
+
+<title>Exeter Wedding Flowers</title>
+</head>
+
+<body>
+
+<!-- home background -->
+<div class="full-width-background">
+    <img src="images/backgrounds/grey.jpg" alt="grey" />
+</div>
+<!-- home background -->
+
+<!-- nivo slider -->
+<div class="slider-wrapper theme-default" id="home">
+    <div id="slider" class="nivoSlider">
+        <img src="images/full-images/9.jpg" alt="" title="This is an example of a caption" />
+        <img src="images/full-images/6.jpg" alt="" title="This is an example of a caption" />
+        <img src="images/full-images/8.jpg" alt="" title="This is an example of a caption" />
+        <img src="images/full-images/10.jpg" alt="" title="This is an example of a caption" />
+    </div>
+    <div id="htmlcaption" class="nivo-html-caption">
+        <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+    </div>
+</div>
+<!-- nivo slider -->
+
+<!-- header and paragraph -->
+<div class="skeleton-center not-full container" id="home1">
+    <div class="sixteen columns">
+        <h1 class="first underlined">Exeter's Wedding Flower Specialists</h1>
+        <p class="last">
+         Choosing the flowers for your wedding...  </p>
+    </div>
+</div>
+<!-- header and paragraph -->
+
+<!-- boxes with icons -->
+<div class="skeleton-center not-full container" id="home2">
+    <div class="sixteen columns">
+        <!-- multiple columns and icons -->
+        <div class="row" style="margin-bottom:0px">
+            <div class="about-circle four columns alpha centered">
+                <img class="full-width-image" src="images/1-circle.png" alt="circle-1" />
+                <h5 class="circle-heading">Venue Decor</h5>
+                <p>
+                    It doesn't have to be all about flowers; the use of Candelabara's, Cocktail glasses and Chair covers all add to the atmosphere of the venue.  Browse our <a href="#">venue decor</a> section to see what other items are available.
+                </p>
+            </div>
+
+            <div class="about-circle four columns centered">
+                <img class="full-width-image" src="images/2-circle.png" alt="circle-2" />
+                <h5 class="circle-heading">Bouquets</h5>
+                <p>
+				Probably the first items that all brides think of when they begin to choose wedding flowers.  However by starting with the <a href="#">wedding style</a> section may help to focus the choice on the particular style or colour and then choose the flowers accordingly.
+                </p>
+            </div>
+
+            <div class="about-circle four columns centered">
+                <img class="full-width-image" src="images/3-circle.png" alt="circle-3" />
+                <h5 class="circle-heading">Free Consultation</h5>
+                <p>
+                    However you decide to decorate the venue or source flowers for your occasion we are always available at <a href="http://www.stleonardsflowers.co.uk"> St Leonards Flowers</a>.  Call us on 01392 219880 or email us using the <a href="#">contact form</a> below to arrange a time to discuss your plans further.
+                </p>
+            </div>
+
+      <!--      <div class="about-circle four columns omega centered">
+                <img class="full-width-image" src="images/4-circle.png" alt="circle-4" />
+                <h5 class="circle-heading">All under our protection</h5>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut viverra nisi. Duis vel enim arcu. 
+                </p>
+            </div>
+     -->   </div>
+    </div>
+</div>
+<!-- boxes with icons -->
+
+<!-- last part with header and text -->
+<div class="skeleton-center not-full container" style="margin-bottom:20px" id="home3">
+ <!--   <div class="sixteen columns">
+        <h3 class="first underlined">So much to took up to</h3>
+        <p class="last">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut viverra nisi. Duis vel enim arcu, vel tincidunt risus. Aliquam in est vitae nibh rhoncus pharetra. Quisque ac massa nisl, et ultricies ante. Aenean blandit lacinia viverra. Nulla facilisi. Donec at nulla id sem vehicula gravida. Maecenas congue, est ac bibendum pellentesque, odio elit ultrices ante, vitae condimentum lectus velit vitae massa.
+        </p>
+    </div>
+--></div>
+<!-- last part with header and text -->
+
+</body>
+</html>
