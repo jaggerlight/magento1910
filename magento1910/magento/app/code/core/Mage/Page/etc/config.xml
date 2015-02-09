@@ -70,11 +70,6 @@
                     <template>page/3columns.phtml</template>
                     <layout_handle>page_three_columns</layout_handle>
                 </three_columns>
-                 <gallery_column module="page" translate="label">
-                    <label>Gallery Column</label>
-                    <template>page/gallery-column.phtml</template>
-                    <layout_handle>page_gallery_column</layout_handle>
-                </three_columns>
             </layouts>
         </page>
     </global>
